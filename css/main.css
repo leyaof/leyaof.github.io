@@ -1,0 +1,96 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+  background-image: url(../img/background.png);
+  background-size: 20px;
+  background-repeat: repeat;
+}
+
+
+.row {
+	display: td;
+	height: 600px;
+}
+
+h1, p {
+	color: #562D7F;
+	text-align: center;
+}
+
+table, th, td {
+	border:1px solid black;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #387EB8;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #D7EBFC;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#menu {
+	overflow:hidden;
+}   
+
+.btn {
+	color: #FFFFFF ;
+    background-color: #54C6D2;
+    border-radius: 30px;
+    border:solid #5c00b3;
+    padding: 15px 32px;
+    font-size: 20px;
+    margin:0 auto;
+    display:block;
+    box-shadow:0 5px #999;
+}
+
+.contact-group {
+	margin: 0 auto;
+	width: 470px;
+}
+
+.contact-group button {
+	margin:10px;
+	display: inline-block;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

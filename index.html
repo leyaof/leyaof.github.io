@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+	<link href="css/main.css" type="text/css" rel="stylesheet"/>
+</head>
+<script>
+function openNav() {
+  document.getElementById("sideMenu").style.width = "300px";
+  document.getElementById("container").style.marginLeft = "300px";
+  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+  document.getElementById("sideMenu").style.width = "0";
+  document.getElementById("container").style.marginLeft= "0";
+  document.body.style.backgroundColor = "white";
+} 
+
+</script>
+
+
+<body>
+
+<div id="sideMenu" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#main">Home</a>
+  <a href="#about">About Me</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact Me</a>
+</div>
+
+<div id="container">
+	<div id="main" class="row">
+		<h1>Home Page</h1>
+		<span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+		<p>THIS SECTION IS UNDER CONSTRUCTION</p>
+	</div>
+	<div id="about" class="row">
+		<h1>About Me</h1>
+		<p>THIS SECTION IS UNDER CONSTRUCTION</p>
+		<! ––Recently graduated student major in Mathematics and Statistiscs. Interested in Data Science.––>
+	</div>
+	<div id="projects" class="row">
+		<h1>Projects</h1>
+		<p>A list of analysis projects</p>
+		<table style="width:50%" align="center">
+			<tr>
+				<th>Project</th>
+				<th>HTML Notebook</th>
+				<th>Repository</th>
+			</tr>
+			<tr>
+				<td>Exploratory Data Analysis on Dota 2 Matches</td>
+				<td><a href="https://leyaof.github.io/Notebooks/dota%20analysis.nb.html" target="_blank">Link</a></td>
+				<td><a href="https://github.com/leyaof/Exploratory-Data-Analysis-on-Dota-2-Matches" target="_blank">Link</a></td>
+			</tr>
+			<tr>
+				<td>Chat Classification</td>
+				<td><a href="https://leyaof.github.io/Notebooks/chat-classification-analysis.html" target="_blank">Link</a></td>
+				<td><a href="https://github.com/leyaof/chat-classification" target="_blank">Link</a></td>
+			</tr>
+			<tr>
+				<td>Movie Analysis</td>
+				<td><a href="https://leyaof.github.io/Notebooks/movie-analysis.html" target="_blank">Link</a></td>
+				<td>[Link]</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div id="contact" class="row">
+		<h1>Contact Me</h1>
+		<div class="contact-group">
+		<button  class="btn" onclick="location.href='mailto:leyao.feng21@gmail.com'" type="button">Email</button>
+		<button  class="btn" onclick="window.open('https://github.com/leyaof', '_blank')" type="button">Github</button>
+		<button  class="btn" onclick="window.open('https://www.linkedin.com/in/leyao-feng/', '_blank')" type="button">Linkedin</button>
+		</div>
+	</div>
+</div>
+</body>
+</html>
