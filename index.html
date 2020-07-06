@@ -5,72 +5,41 @@
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>
 	<title>Le Yao Feng</title>
 </head>
-<script>
-function openNav() {
-  document.getElementById("sideMenu").style.width = "300px";
-  document.getElementById("container").style.marginLeft = "300px";
-  document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-}
-
-function closeNav() {
-  document.getElementById("sideMenu").style.width = "0";
-  document.getElementById("container").style.marginLeft= "0";
-  document.body.style.backgroundColor = "white";
-} 
-
-</script>
-
 
 <body>
 
-<div id="sideMenu" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#main">Home</a>
-  <a href="#about">About Me</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact Me</a>
-</div>
+
 
 <div id="container">
-	<div id="main" class="row">
-		<h1>Home Page</h1>
-		<span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
-		<p>THIS SECTION IS UNDER CONSTRUCTION</p>
+	<div id="main" class="main">
+		<h1 class="title">Porfolio</h1>
 	</div>
-	<div id="about" class="row">
-		<h1>About Me</h1>
-		<p>THIS SECTION IS UNDER CONSTRUCTION</p>
-		<! ––Recently graduated student major in Mathematics and Statistiscs. Interested in Data Science.––>
+	<div id="project1" class="row">
+		<h1>Exploratory Data Analysis on Dota 2 Matches</h1>
+		<p>Visualizations to examine trends and habits of over seven years of match history data</p>
+		<a class="img-wrap">
+			<img src="img/Dota2_Exploratory_image.jpg" alt="Dota2 Exploratory Dashboard" class="image">
+			<div class="middle">
+				<button class="text" onclick="window.open('https://leyaof.github.io/Notebooks/dota%20analysis.nb.html', '_blank')" type="button">Notebook</button>
+				<button class="text" onclick="window.open('https://github.com/leyaof/Exploratory-Data-Analysis-on-Dota-2-Matches', '_blank')" type="button">Repository</button>
+				<button class="text" onclick="window.open('https://public.tableau.com/profile/leyao.feng#!/vizhome/Dota2Exploratory/Dashboard1', '_blank')" type="button">Tableau</button>
+			</div>
+		</a>
 	</div>
-	<div id="projects" class="row">
-		<h1>Projects</h1>
-		<p>A list of data analysis projects</p>
-		<table style="width:50%" align="center">
-			<tr>
-				<th>Project</th>
-				<th>HTML Notebook</th>
-				<th>Repository</th>
-			</tr>
-			<tr>
-				<td>Exploratory Data Analysis on Dota 2 Matches</td>
-				<td><a href="https://leyaof.github.io/Notebooks/dota%20analysis.nb.html" target="_blank">Link</a></td>
-				<td><a href="https://github.com/leyaof/Exploratory-Data-Analysis-on-Dota-2-Matches" target="_blank">Link</a></td>
-			</tr>
-			<tr>
-				<td>Chat Classification</td>
-				<td><a href="https://leyaof.github.io/Notebooks/chat-classification-analysis.html" target="_blank">Link</a></td>
-				<td><a href="https://github.com/leyaof/chat-classification" target="_blank">Link</a></td>
-			</tr>
-			<tr>
-				<td>Movie Analysis</td>
-				<td><a href="https://leyaof.github.io/Notebooks/movie-analysis.html" target="_blank">Link</a></td>
-				<td><a href="https://github.com/leyaof/movie-analysis" target="_blank">Link</a></td>
-			</tr>
-		</table>
+	<div id="project2" class="row">
+		<h1>Chat Classification</h1>
+		<p>An attempt to classify in game chat messages with end game result(win/lose) through explorations of language trends</p>
+		<a class="img-wrap">
+			<img src="img/chat_classification_image.jpg" alt="Dota2 Chat Classification View" class="image">
+			<div class="middle">
+				<button class="text" onclick="window.open('https://leyaof.github.io/Notebooks/chat-classification-analysis.html', '_blank')" type="button">Notebook</button>
+				<button class="text" onclick="window.open('https://github.com/leyaof/chat-classification', '_blank')" type="button">Repository</button>
+			</div>
+		</a>
 	</div>
 	
-	<div id="contact" class="row">
-		<h1>Contact Me</h1>
+	<div id="contact" class="contact">
+		<h2>Contact Me</h2>
 		<div class="contact-group">
 		<button  class="btn" onclick="location.href='mailto:leyao.feng21@gmail.com'" type="button">Email</button>
 		<button  class="btn" onclick="window.open('https://github.com/leyaof', '_blank')" type="button">Github</button>
