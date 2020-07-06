@@ -183,8 +183,8 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  width: 200px;
-	  height: 200px;
+	  height: auto;
+	  width:auto;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -204,8 +204,8 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  width: 200px;
-	  height: 200px;
+	  height: auto;
+	  width:auto;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -225,8 +225,8 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  width: 200px;
-	  height: 200px;
+	  height: auto;
+	  width:auto;
 	  bottom: 0;
 	  position: absolute;  
   }
