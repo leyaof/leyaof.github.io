@@ -176,7 +176,7 @@ table, th, td {
   }
   
   a.img-wrap {
-	  height: 25%
+	  height: 5%
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
@@ -184,7 +184,7 @@ table, th, td {
   
   a.img-wrap img {
 	  width: 54%;
-	  height: 25%;
+	  height: 5%;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -197,7 +197,7 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: 25%
+	  height: 5%
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
@@ -205,7 +205,7 @@ table, th, td {
   
   a.img-wrap img {
 	  width: 54%;
-	  height: 25%;
+	  height: 5%;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -218,7 +218,7 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: 25%
+	  height: 5%
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
@@ -226,7 +226,7 @@ table, th, td {
   
   a.img-wrap img {
 	  width: 55%;
-	  height: 25%;
+	  height: 5%;
 	  bottom: 0;
 	  position: absolute;  
   }
