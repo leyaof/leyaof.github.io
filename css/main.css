@@ -176,14 +176,14 @@ table, th, td {
   }
   
   a.img-wrap {
-	  height: 200px;
+	  height: 200px
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  width: 200px;
+	  width: 300px;
 	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
@@ -197,14 +197,14 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: auto;
+	  height: 200px;
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  width: 200px;
+	  width: 300px;
 	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
@@ -218,14 +218,14 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: auto;
+	  height: 200px;
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  width: 200px;
+	  width: 300px;
 	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
