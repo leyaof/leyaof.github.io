@@ -167,11 +167,19 @@ table, th, td {
 	display: inline-block;
 }
 
+/* ----------------------media settings-------------------*/
+
 @media screen and (max-width: 980px) {
   .row {
 	  width: 94%;
 	  height: 94%;
   }
+  
+  .main {
+	  width: auto;
+	  height:94%;
+  }
+  
 }
 
 @media screen and (max-width: 700px) {
@@ -179,11 +187,21 @@ table, th, td {
 	  width: auto;
 	  height: auto;
   }
+  
+  .main {
+	  width: auto;
+	  height:94%;
+  }
 }
 
 @media screen and (max-width: 480px) {
   .row {
 	  width: auto;
 	  height: auto;
+  }
+  
+  .main {
+	  width: auto;
+	  height:94%;
   }
 }
