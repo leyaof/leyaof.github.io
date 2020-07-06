@@ -176,15 +176,15 @@ table, th, td {
   }
   
   a.img-wrap {
-	  height: auto;
+	  height: 200px;
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  height: auto;
-	  width:auto;
+	  width: 200px;
+	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -204,8 +204,8 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  height: auto;
-	  width:auto;
+	  width: 200px;
+	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -225,8 +225,8 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  height: auto;
-	  width:auto;
+	  width: 200px;
+	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
   }
