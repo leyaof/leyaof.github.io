@@ -183,7 +183,7 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  width: 300px;
+	  width: 350px;
 	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
@@ -192,8 +192,8 @@ table, th, td {
 
 @media screen and (max-width: 700px) {
   .row {
-	  width: 90%;
-	  height: 90%;
+	  width: auto;
+	  height: auto;
   }
   
     a.img-wrap {
@@ -204,7 +204,7 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  width: 300px;
+	  width: 350px;
 	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
@@ -213,8 +213,8 @@ table, th, td {
 
 @media screen and (max-width: 480px) {
   .row {
-	  width: 90%;
-	  height: 90%;
+	  width: auto;
+	  height: auto;
   }
   
     a.img-wrap {
@@ -225,7 +225,7 @@ table, th, td {
   }
   
   a.img-wrap img {
-	  width: 300px;
+	  width: 350px;
 	  height: 200px;
 	  bottom: 0;
 	  position: absolute;  
