@@ -176,15 +176,15 @@ table, th, td {
   }
   
   a.img-wrap {
-	  height: 94%
+	  height: 54%
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  width: 94%;
-	  height: 94%;
+	  width: 54%;
+	  height: 54%;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -197,15 +197,15 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: 94%
+	  height: 54%
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  width: 94%;
-	  height: 94%;
+	  width: 54%;
+	  height: 54%;
 	  bottom: 0;
 	  position: absolute;  
   }
@@ -218,15 +218,15 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: 94%
+	  height: 54%
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
   }
   
   a.img-wrap img {
-	  width: 94%;
-	  height: 94%;
+	  width: 95%;
+	  height: 54%;
 	  bottom: 0;
 	  position: absolute;  
   }
