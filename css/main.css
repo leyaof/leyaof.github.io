@@ -192,8 +192,8 @@ table, th, td {
 
 @media screen and (max-width: 700px) {
   .row {
-	  width: auto;
-	  height: auto;
+	  width: 90%;
+	  height: 90%;
   }
   
     a.img-wrap {
@@ -213,8 +213,8 @@ table, th, td {
 
 @media screen and (max-width: 480px) {
   .row {
-	  width: auto;
-	  height: auto;
+	  width: 90%;
+	  height: 90%;
   }
   
     a.img-wrap {
