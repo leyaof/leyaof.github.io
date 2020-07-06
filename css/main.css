@@ -176,7 +176,7 @@ table, th, td {
   }
   
   a.img-wrap {
-	  height: 200px
+	  height: auto;
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
@@ -197,7 +197,7 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: 200px;
+	  height: auto;
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
@@ -218,7 +218,7 @@ table, th, td {
   }
   
     a.img-wrap {
-	  height: 200px;
+	  height: auto;
 	  width:auto;
 	  display:inline-block;
 	  overflow:hidden;
