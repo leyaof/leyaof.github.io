@@ -67,6 +67,10 @@ body {
 	display: inline-block;
 }
 
+.text:hover {
+	background-color: #cce5d9;
+}
+
 .row:hover .image {
 	opacity:0.3;
 }
