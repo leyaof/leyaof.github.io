@@ -205,6 +205,15 @@ table, th, td {
     box-shadow:0 5px #999;
 }
 
+.text {
+	opacity: 0;
+	background-color: #8FC1C6;
+    color: white;
+    font-size: 8px;
+    padding: 8px 8px;
+	display: inline-block;
+}
+
 }
 
 @media screen and (max-width: 700px) {
@@ -239,6 +248,14 @@ table, th, td {
     box-shadow:0 5px #999;
 }
 
+.text {
+	opacity: 0;
+	background-color: #8FC1C6;
+    color: white;
+    font-size: 8px;
+    padding: 8px 8px;
+	display: inline-block;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -273,4 +290,12 @@ table, th, td {
     box-shadow:0 5px #999;
 }
 
+.text {
+	opacity: 0;
+	background-color: #8FC1C6;
+    color: white;
+    font-size: 8px;
+    padding: 8px 8px;
+	display: inline-block;
+}
 }
