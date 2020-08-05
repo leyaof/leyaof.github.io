@@ -234,15 +234,12 @@ table, th, td {
 }   
 
 /*contact*/
-.contact-wrap {
-	width: 1100px;
-	float:right;
-}
 
 .contact-container {
-	display: center;
-	margin: 0 auto;
-	width:350px;
+	margin-top: 0;
+	padding-top: 0;
+	margin: auto;
+	width: 650px;
 }
 
 .contact-list {
@@ -255,39 +252,15 @@ table, th, td {
 	font-size: 36px;
 	color: #8FC1C6;
 	padding:10px;
+	margin-left: 20px;
 }
 
-.message-container {
-	position: right;
+.contact-icon {
+	display:inline;
 }
 
-.contact-container, .message-container {
-	margin-top: 0;
-	padding-top: 0;
-	display: table-cell;
-	padding: 0px;
-}
 
-.message-container {
-	padding-left: 80px;
-	background-color: #8FC1C6; 
-	width: 50%;
-}
 
-.message-detail {
-	width: 500px;
-	height: 20px;
-}
-
-.message-box {
-	width: 500px;
-	height: 50px;
-}
-
-.button {
-	width: 100px;
-	height: 40px;
-}
 /* ----------------------media settings-------------------*/
 
 @media screen and (max-width: 980px) {
