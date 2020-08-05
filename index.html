@@ -1,76 +1,120 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<link href="css/main.css" type="text/css" rel="stylesheet"/>
-	<title>Le Yao Feng</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Leyao Feng</title>
 </head>
 
 <body>
 
-
+<ul class="menu-list">
+	<li class="tab"><a class="active" href="#front">Home</a></li>
+	<li class="tab"><a href="#about">About</a></li>
+	<li class="tab"><a href="#project">Projects</a></li>
+	<li class="tab"><a href="#contact">Contact</a></li>
+</ul>
 
 <div id="container">
-	<div id="main" class="main">
-		<h1 class="title">Portfolio</h1>
-	</div>
+	<section class="front-section"id="front">
+		<h1 id="name">Leyao Feng</h1>
+		<h2 id="intro-description">Data Analyst</h2>
+	</section>
+	
+	<section id="about">
+		<h3 class="title">About Me</h3>
+		<p class="description">Hi, I'm Leyao, a Data analyst with experience applying statistic to a diversity of topics including healthcare, economics, and e-sports. 
+		I am an innovative thinker and problem solver. I am proficient at coming up with creative solutions. 
+		I hold a Bachelor's Degree in Mathematics and Statistics from the University of Toronto.</p>
+		<div class="traits-container">
+			<div class="tools-bin">
+				<ul class="tool-list">
+					<li>Tools I use</li>
+					<li>Python</li>
+					<li>R</li>
+					<li>SQL</li>
+					<li>Tableau</li>
+				</ul>
+			</div>
+			<div class="interests-bin">
+				<ul class="interest-list">
+					<li>Areas of Interest</li>
+					<li>Data Visualization</li>
+					<li>Machine Learning</li>
+					<li>Natural Language Processing</li>
+				</ul>
+			</div>
+			<div class="hobbies-bin">
+				<ul class="hobby-list">
+					<li>Hobbies</li>
+					<li>Auto Chess</li>
+					<li>Badminton</li>
+					<li>Digital Arts</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	
+	<section id="project">
+	<h3 id="project" class="title">Projects</h3>
 	<div class="project-container">
-		<div id="project0" class="row">
-			<h2>Superstore Profit and Sales Visualization</h1>
-			<p>Profit and Sales visualization on the Superstore dataset found in Tableau,with an interactive map</p>
-			<a class="img-wrap">
-				<img src="img/superstore_viz.jpg" alt="Superstore Visualization Dashboard" class="image">
-				<div class="middle">
-					<button class="text" onclick="window.open('https://public.tableau.com/profile/leyao.feng#!/vizhome/Superstore_15951170731860/Dashboard1', '_blank')" type="button">Tableau</button>
-				</div>
-			</a>
+		<div class="project">
+			<img src="img/superstore_viz.jpg" alt="Superstore Visualization Dashboard" class="image">
+			<div class="project-content">
+				<a class="project-title" href="https://public.tableau.com/profile/leyao.feng#!/vizhome/Superstore_15951170731860/Dashboard1" target="_blank">Superstore Profit and Sales Visualization</a>
+				<p class="project-desc">Profit and Sales visualization on the Superstore dataset found in Tableau,with an interactive map</p>
+			</div>
 		</div>
-		<div id="project1" class="row">
-			<h2>Exploratory Data Analysis on Dota 2 Matches</h1>
-			<p>Visualizations to examine trends and habits of over seven years of match history data</p>
-			<a class="img-wrap">
-				<img src="img/Dota2_Exploratory_image.jpg" alt="Dota2 Exploratory Dashboard" class="image">
-				<div class="middle">
-					<button class="text" onclick="window.open('https://leyaof.github.io/Notebooks/dota%20analysis.nb.html', '_blank')" type="button">Notebook</button>
-					<button class="text" onclick="window.open('https://github.com/leyaof/Exploratory-Data-Analysis-on-Dota-2-Matches', '_blank')" type="button">Repository</button>
-					<button class="text" onclick="window.open('https://public.tableau.com/profile/leyao.feng#!/vizhome/Dota2Exploratory/Dashboard1', '_blank')" type="button">Tableau</button>
-				</div>
-			</a>
+		<div class="project">
+			<img src="img/Dota2_Exploratory_image.jpg" alt="Dota2 Exploratory Dashboard" class="image">
+			<div class="project-content">
+				<a class="project-title" href="https://leyaof.github.io/Notebooks/dota%20analysis.nb.html" target="_blank">Exploratory Data Analysis on Dota 2 Matches</a>
+				<p class="project-desc">Visualizations to examine trends and habits of over seven years of match history data</p>
+			</div>
 		</div>
-				<div id="project3" class="row">
-			<h2>Movie Analysis</h1>
-			<p>Exploratory data analysis and visualizations on TMDB movie metadata from Kaggle </p>
-			<a class="img-wrap">
-				<img src="img/Movie_analysis_image.jpg" alt="Movie analysis View" class="image">
-				<div class="middle">
-					<button class="text" onclick="window.open('https://leyaof.github.io/Notebooks/movie-analysis.html', '_blank')" type="button">Notebook</button>
-					<button class="text" onclick="window.open('https://github.com/leyaof/movie-analysis', '_blank')" type="button">Repository</button>
-				</div>
-			</a>
+		<div class="project">
+			<img src="img/Movie_analysis_image.jpg" alt="Movie analysis View" class="image">
+			<div class="project-content">
+				<a class="project-title" href="https://leyaof.github.io/Notebooks/movie-analysis.html" target="_blank">Movie Analysis</a>
+				<p class="project-desc">Exploratory data analysis and visualizations on TMDB movie metadata from Kaggle</p>
+			</div>
 		</div>
-		<div id="project2" class="row">
-			<h2>Chat Classification</h1>
-			<p>An attempt to classify in game chat messages with end game result(win/lose) through explorations of language trends</p>
-			<a class="img-wrap">
-				<img src="img/chat_classification_image.jpg" alt="Dota2 Chat Classification View" class="image">
-				<div class="middle">
-					<button class="text" onclick="window.open('https://leyaof.github.io/Notebooks/chat-classification-analysis.html', '_blank')" type="button">Notebook</button>
-					<button class="text" onclick="window.open('https://github.com/leyaof/chat-classification', '_blank')" type="button">Repository</button>
-				</div>
-			</a>
+		<div class="project">
+			<img src="img/chat_classification_image.jpg" alt="Dota2 Chat Classification View" class="image">
+			<div class="project-content">
+				<a class="project-title" href="https://leyaof.github.io/Notebooks/chat-classification-analysis.html" target="_blank">Chat Classification</a>
+				<p class="project-desc">An attempt to classify in game chat messages with end game result(win/lose) through explorations of language trends</p>
+			</div>
 		</div>
 	</div>
+	</section>
 	
-	
-	<div id="contact" class="contact">
-		<h2>Contact Me</h2>
-		<div class="contact-group">
-		<button  class="btn" onclick="location.href='mailto:leyao.feng21@gmail.com'" type="button">Email</button>
-		<button  class="btn" onclick="window.open('https://github.com/leyaof', '_blank')" type="button">Github</button>
+	<section id="contact" class="contact">
+		<h3 class="title">Contact Me</h3>
+		<div class="contact-wrap">
+		<div class="contact-container">
+			<ul class="contact-list">
+				<li class="contact-icon">
+					<i class="fa fa-github"></i>
+					<a href="https://github.com/leyaof" target="_blank">Github</a>
+				</li>
+				<li class="contact-icon">
+					<i class="fa fa-linkedin"></i>
+					<a href="https://www.linkedin.com/in/leyao-feng/" target="_blank">Linkedin</a>
+				</li>
+				<li class="contact-icon">
+					<i class="fa fa-envelope-square"></i>
+					<a href="mailto:leyao.feng21@gmail.com">leyao.feng21@gmail.com</a>
+				</li>
+			</ul>
+		</div>
 		
 		</div>
-	</div>
+		</div>
+	</section>
 </div>
 </body>
 </html>
