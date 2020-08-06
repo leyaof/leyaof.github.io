@@ -269,6 +269,16 @@ table, th, td {
 
 
 /* ----------------------media settings-------------------*/
+@media screen and (max-width: 400px) {
+	
+	#front {
+		width: 160vh;
+		padding:25%;
+		text-align: center;
+		background-image: url("../img/background_2.jpg");
+	}
+	
+}
 
 @media screen and (max-width: 980px) {
 
@@ -285,15 +295,20 @@ table, th, td {
 	margin: 0 auto;
 }
 	
-	#main {
-		width: 1200px;
-	}
+#about {
+	width: 1200px;
+}
+
+#main {
+	width: 1200px;
+}
 	
-	#contact {
-		width: 1200px;
-	}
+#contact {
+	width: 1200px;
+}
 	
 .title {
+	display: center;
 	font-size: 100px;
 	width: 1000px;
 
@@ -325,6 +340,13 @@ table, th, td {
 	font-size: 50px;
 }
 
+.project-title {
+	font-size: 12vw;
+}
+
+.project-desc {
+	font-size: 5vw;
+}
 .project-container {
 	display: inline;
 	grid-template-columns: auto auto auto;
@@ -341,6 +363,10 @@ table, th, td {
 	 width: 200%;
 	 height: 100%;
 	 margin: 100px;
+}
+
+.project-content {
+	width: 170vw;
 }
 
 .contact-container {
