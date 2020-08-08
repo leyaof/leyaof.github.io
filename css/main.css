@@ -308,13 +308,21 @@ body {
 }
 
 .traits-container {
-	width:130%;
+	width:131%;
 	margin-left: 20%;
 	padding: 0;
 }
 
 .tools-bin, .interests-bin, .hobbies-bin {
 	padding: 0px;
+}
+
+.tool-list li:first-child, .interest-list li:first-child, .hobby-list li:first-child{
+	font-size:25px;
+}
+
+.hobby-list li:first-child{
+	margin-bottom:60px;
 }
 
 .project-container { 
@@ -335,9 +343,9 @@ body {
 }
 
 .contact-container {
-	width: 170vw;
+	width: 149vw;
 	padding:0;
-	margin: 0 auto;
+	margin-left: 16%;
 }
 
 .contact-icon i{
@@ -353,6 +361,246 @@ body {
 }
 
 @media screen and (min-width: 385px) and (max-width: 423px) {
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.tab a {
+  display: block;
+  padding: 20px 50px;
+}
+
+.title {
+	display: center;
+	width:100%;
+	margin-left: 30%;
+	font-size: 300%;
+}
+
+.description {
+	width: 120%;
+	margin-left: 30%;
+}
+
+.front-section {
+	width:150%;
+}
+
+.traits-container {
+	width:130%;
+	margin-left: 25%;
+	padding: 0;
+}
+
+.tools-bin, .interests-bin, .hobbies-bin {
+	padding: 0px;
+}
+
+.hobby-list li:first-child{
+	margin-bottom:60px;
+}
+
+.project-container { 
+	display: inline;
+	width: 300vw;
+}
+
+.project {
+	height: 80vw;
+	width: 150vw;
+	margin-left:50px;
+	margin-bottom: 15%;
+}
+
+.project-title {
+	font-size: 10vw;
+	width: 150vw;
+}
+
+.contact-container {
+	width: 166vw;
+	padding:0;
+	margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 424px) and (max-width: 477px) {
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.tab a {
+  display: block;
+  padding: 20px 50px;
+}
+
+.title {
+	display: center;
+	width:100%;
+	margin-left: 30%;
+	font-size: 300%;
+}
+
+.description {
+	width: 120%;
+	margin-left: 30%;
+}
+
+.front-section {
+	width:150%;
+}
+
+.traits-container {
+	width:130%;
+	margin-left: 25%;
+	padding: 0;
+}
+
+.tools-bin, .interests-bin, .hobbies-bin {
+	padding: 0px;
+}
+
+.hobby-list li:first-child{
+	margin-bottom:60px;
+}
+
+.project-container { 
+	display: inline;
+	width: 300vw;
+}
+
+.project {
+	height: 80vw;
+	width: 150vw;
+	margin-left:50px;
+	margin-bottom: 15%;
+}
+
+.project-title {
+	font-size: 10vw;
+	width: 150vw;
+}
+
+.contact-container {
+	width: 160vw;
+}
+
+.contact-icon i{
+	font-size: 12vw;
+	padding:10px;
+	margin-left: 5vw;
+}
+}
+
+@media screen and (min-width: 478px) and (max-width: 506px) {
+html {
+  width: 100%;
+}
+
+body {
+  width: 100%;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.tab a {
+  display: block;
+  padding: 20px 50px;
+}
+
+.title {
+	display: center;
+	width:100%;
+	margin-left: 30%;
+	font-size: 300%;
+}
+
+.description {
+	width: 120%;
+	margin-left: 30%;
+}
+
+.front-section {
+	width:150%;
+}
+
+.traits-container {
+	width:130%;
+	margin-left: 25%;
+	padding: 0;
+}
+
+.tools-bin, .interests-bin, .hobbies-bin {
+	padding: 0px;
+}
+
+.interest-list li:first-child{
+	margin-bottom:60px;
+}
+
+.hobby-list li:first-child{
+	margin-bottom:60px;
+}
+
+.project-container { 
+	display: inline;
+	width: 300vw;
+}
+
+.project {
+	height: 80vw;
+	width: 150vw;
+	margin-left:50px;
+	margin-bottom: 15%;
+}
+
+.project-title {
+	font-size: 10vw;
+	width: 150vw;
+}
+
+.contact-container {
+	width: 160vw;
+}
+
+.contact-icon i{
+	font-size: 12vw;
+	padding:10px;
+	margin-left: 5vw;
+}
+}
+
+@media screen and (min-width: 507px) and (max-width: 1041px) {
 html {
   width: 100%;
 }
@@ -418,153 +666,11 @@ body {
 }
 
 .contact-container {
-	width: 166vw;
-	padding:0;
-	margin: 0 auto;
-}
-}
-
-@media screen and (min-width: 424px) and (max-width: 505px) {
-html {
-  width: 100%;
-}
-
-body {
-  width: 100%;
-}
-
-.menu-list {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.tab a {
-  display: block;
-  padding: 20px 50px;
-}
-
-.title {
-	display: center;
-	width:100%;
-	margin-left: 30%;
-	font-size: 300%;
-}
-
-.description {
-	width: 120%;
-	margin-left: 30%;
-}
-
-.front-section {
-	width:150%;
-}
-
-.traits-container {
-	width:50%;
-}
-
-.tools-bin, .interests-bin, .hobbies-bin {
-	display: table-cell;
-	padding: 0px;
-}
-
-.project-container { 
-	display: inline;
-	width: 300vw;
-}
-
-.project {
-	height: 80vw;
-	width: 150vw;
-	margin-left:50px;
-	margin-bottom: 15%;
-}
-
-.project-title {
-	font-size: 10vw;
-	width: 150vw;
-}
-
-.contact-container {
 	width: 160vw;
 }
 
 .contact-icon i{
-	font-size: 12vw;
-	padding:10px;
-	margin-left: 5vw;
-}
-}
-
-@media screen and (min-width: 506px) and (max-width: 1041px) {
-html {
-  width: 100%;
-}
-
-body {
-  width: 100%;
-}
-
-.menu-list {
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.tab a {
-  display: block;
-  padding: 20px 50px;
-}
-
-.title {
-	display: center;
-	width:100%;
-	margin-left: 30%;
-	font-size: 300%;
-}
-
-.description {
-	width: 120%;
-	margin-left: 30%;
-}
-
-.front-section {
-	width:150%;
-}
-
-.traits-container {
-	width:100%;
-	margin-left: 30%;
-}
-
-.project-container { 
-	display: inline;
-	width: 300vw;
-}
-
-.project {
-	height: 80vw;
-	width: 150vw;
-	margin-left:50px;
-	margin-bottom: 15%;
-}
-
-.project-title {
 	font-size: 10vw;
-	width: 150vw;
-}
-
-.contact-container {
-	width: 160vw;
-}
-
-.contact-icon i{
-	font-size: 12vw;
 	padding:10px;
 	margin-left: 5vw;
 }
