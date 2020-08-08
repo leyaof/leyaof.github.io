@@ -269,14 +269,95 @@ table, th, td {
 
 
 /* ----------------------media settings-------------------*/
-@media screen and (min-width: 300px) and (max-width: 423px) {
+@media screen and (min-width: 300px) and (max-width: 384px) {
 	html {
-  height: 100%;
   width: 100%;
 }
 
 body {
-  height: 100%;
+  width: 100%;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.tab a {
+  display: block;
+  padding: 20px 30px;
+}
+
+.title {
+	display: center;
+	width:130%;
+	margin-left: 10%;
+	font-size: 300%;
+}
+
+.description {
+	width: 120%;
+	margin-left: 30%;
+}
+
+.front-section {
+	width:150%;
+}
+
+.traits-container {
+	width:130%;
+	margin-left: 20%;
+	padding: 0;
+}
+
+.tools-bin, .interests-bin, .hobbies-bin {
+	padding: 0px;
+}
+
+.project-container { 
+	display: inline;
+	width: 300vw;
+}
+
+.project {
+	height: 80vw;
+	width: 150vw;
+	margin-left:50px;
+	margin-bottom: 15%;
+}
+
+.project-title {
+	font-size: 10vw;
+	width: 150vw;
+}
+
+.contact-container {
+	width: 170vw;
+	padding:0;
+	margin: 0 auto;
+}
+
+.contact-icon i{
+	font-size: 90%;
+	padding:1%;
+	margin: 0 auto;
+}
+
+.contact-icon a {
+	font-size: 90%;
+	}
+
+}
+
+@media screen and (min-width: 385px) and (max-width: 423px) {
+html {
+  width: 100%;
+}
+
+body {
   width: 100%;
 }
 
@@ -344,13 +425,11 @@ body {
 }
 
 @media screen and (min-width: 424px) and (max-width: 505px) {
-	html {
-  height: 100%;
+html {
   width: 100%;
 }
 
 body {
-  height: 100%;
   width: 100%;
 }
 
@@ -422,12 +501,10 @@ body {
 
 @media screen and (min-width: 506px) and (max-width: 1100px) {
 html {
-  height: 100%;
   width: 100%;
 }
 
 body {
-  height: 100%;
   width: 100%;
 }
 
