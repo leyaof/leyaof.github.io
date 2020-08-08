@@ -677,7 +677,7 @@ body {
 
 }
 
-@media screen and (min-width: 1042px) {
+@media screen and (min-width: 1042px) and (max-width: 1440) {
 .project-container { 
 	grid-template-columns: 32% 32% 32%;
 	grid-gap: 10% 0%;
