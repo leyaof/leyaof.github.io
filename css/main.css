@@ -269,7 +269,81 @@ table, th, td {
 
 
 /* ----------------------media settings-------------------*/
-@media screen and (min-width: 300px) and (max-width: 505px) {
+@media screen and (min-width: 300px) and (max-width: 423px) {
+	html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.menu-list {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.tab a {
+  display: block;
+  padding: 20px 50px;
+}
+
+.title {
+	display: center;
+	width:100%;
+	margin-left: 30%;
+	font-size: 300%;
+}
+
+.description {
+	width: 120%;
+	margin-left: 30%;
+}
+
+.front-section {
+	width:150%;
+}
+
+.traits-container {
+	width:130%;
+	margin-left: 25%;
+	padding: 0;
+}
+
+.tools-bin, .interests-bin, .hobbies-bin {
+	padding: 0px;
+}
+
+.project-container { 
+	display: inline;
+	width: 300vw;
+}
+
+.project {
+	height: 80vw;
+	width: 150vw;
+	margin-left:50px;
+	margin-bottom: 15%;
+}
+
+.project-title {
+	font-size: 10vw;
+	width: 150vw;
+}
+
+.contact-container {
+	width: 166vw;
+	padding:0;
+	margin: 0 auto;
+}
+}
+
+@media screen and (min-width: 424px) and (max-width: 505px) {
 	html {
   height: 100%;
   width: 100%;
@@ -311,6 +385,11 @@ body {
 
 .traits-container {
 	width:50%;
+}
+
+.tools-bin, .interests-bin, .hobbies-bin {
+	display: table-cell;
+	padding: 0px;
 }
 
 .project-container { 
