@@ -13133,7 +13133,7 @@ There are 10841 apps recorded in this Google Play Store dataset. From preview of
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[145]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load packages</span>
@@ -13150,7 +13150,7 @@ There are 10841 apps recorded in this Google Play Store dataset. From preview of
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[50]:</div>
+<div class="prompt input_prompt">In&nbsp;[146]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in the dataset</span>
@@ -13165,7 +13165,7 @@ There are 10841 apps recorded in this Google Play Store dataset. From preview of
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[147]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13181,7 +13181,7 @@ There are 10841 apps recorded in this Google Play Store dataset. From preview of
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[51]:</div>
+    <div class="prompt output_prompt">Out[147]:</div>
 
 
 
@@ -13313,7 +13313,7 @@ There are 10841 apps recorded in this Google Play Store dataset. From preview of
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[52]:</div>
+<div class="prompt input_prompt">In&nbsp;[148]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Installs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13329,7 +13329,7 @@ There are 10841 apps recorded in this Google Play Store dataset. From preview of
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[52]:</div>
+    <div class="prompt output_prompt">Out[148]:</div>
 
 
 
@@ -13368,7 +13368,7 @@ Name: Installs, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[53]:</div>
+<div class="prompt input_prompt">In&nbsp;[149]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">bad_data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Installs&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Free&#39;</span><span class="p">)]</span>
@@ -13385,7 +13385,7 @@ Name: Installs, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[53]:</div>
+    <div class="prompt output_prompt">Out[149]:</div>
 
 
 
@@ -13451,20 +13451,13 @@ Name: Installs, dtype: int64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>The column for the number of installs has one value listed as Free, which is pretty strange. After taking a closer look at that specific row, it seems like all the values have shifted one column left to where they are supposed to be. Nevertheless, the values for this entire row are invalid so we will remove this row.</p>
-
-</div>
-</div>
-</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[54]:</div>
+<div class="prompt input_prompt">In&nbsp;[150]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="n">bad_data</span><span class="o">.</span><span class="n">index</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># remove the invalid row</span>
+<span class="n">index</span> <span class="o">=</span> <span class="n">bad_data</span><span class="o">.</span><span class="n">index</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
 </pre></div>
 
@@ -13473,9 +13466,17 @@ Name: Installs, dtype: int64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>As we mentioned in the introduction, we will be using the number of installs as a measure of popularity. There is one value in the column listed as Free, which is pretty strange. After taking a closer look at that specific row, it seems like all the values have shifted one column left to where they are supposed to be. Nevertheless, the values for this entire row are invalid so we will remove this row. Moreover, there are non-numeric characters in the column which we will also remove.</p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[55]:</div>
+<div class="prompt input_prompt">In&nbsp;[151]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Size&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
@@ -13491,7 +13492,7 @@ Name: Installs, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[55]:</div>
+    <div class="prompt output_prompt">Out[151]:</div>
 
 
 
@@ -13519,7 +13520,7 @@ Name: Size, Length: 461, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[56]:</div>
+<div class="prompt input_prompt">In&nbsp;[152]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># change size of KB to MB</span>
@@ -13546,7 +13547,7 @@ Name: Size, Length: 461, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[57]:</div>
+<div class="prompt input_prompt">In&nbsp;[153]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop duplicate entries</span>
@@ -13560,7 +13561,7 @@ Name: Size, Length: 461, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[58]:</div>
+<div class="prompt input_prompt">In&nbsp;[154]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -13577,13 +13578,13 @@ Name: Size, Length: 461, dtype: int64</pre>
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[58]:</div>
+    <div class="prompt output_prompt">Out[154]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x17691964d08&gt;</pre>
+<pre>&lt;matplotlib.axes._subplots.AxesSubplot at 0x1768deb5488&gt;</pre>
 </div>
 
 </div>
@@ -13609,7 +13610,7 @@ Name: Size, Length: 461, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[155]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Size&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Size&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
@@ -13667,20 +13668,23 @@ Name: Size, Length: 461, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[91]:</div>
+<div class="prompt input_prompt">In&nbsp;[156]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">labels</span> <span class="o">=</span> <span class="n">category_freq_df</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">argsort</span><span class="p">()</span><span class="o">.</span><span class="n">argsort</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># configuration of plot</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">category_freq_df</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">argsort</span><span class="p">()</span><span class="o">.</span><span class="n">argsort</span><span class="p">()</span>
 <span class="n">palette</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(</span><span class="s2">&quot;Set3&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">category_freq_df</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;axes.labelsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">70</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
+<span class="c1"># category frequency plot</span>
 <span class="n">category_chart</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;Counts&quot;</span><span class="p">,</span>
            <span class="n">palette</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">palette</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])[</span><span class="n">labels</span><span class="p">],</span>
            <span class="n">data</span><span class="o">=</span><span class="n">category_freq_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
+<span class="c1"># add percentage to the top of each bar</span>
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">category_freq_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
     <span class="n">category_chart</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">name</span><span class="p">,</span>
                         <span class="n">row</span><span class="o">.</span><span class="n">Counts</span><span class="p">,</span>
@@ -13692,6 +13696,7 @@ Name: Size, Length: 461, dtype: int64</pre>
     
 <span class="n">category_chart</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Top 10 Categories with the Most Apps&#39;</span><span class="p">,</span>
                          <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
+<span class="c1"># configuration of labels</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">category_chart</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">()</span>
 <span class="n">chart</span> <span class="o">=</span> <span class="n">category_chart</span><span class="o">.</span><span class="n">set_xticklabels</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span>
                                        <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">,</span>
@@ -13756,14 +13761,16 @@ In this section, we will look at how each category is doing by measuring the tot
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[135]:</div>
+<div class="prompt input_prompt">In&nbsp;[157]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">category_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create dataframe with frequency of installs per category</span>
+<span class="n">category_df</span> <span class="o">=</span> <span class="p">(</span><span class="n">data</span>
                <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;Category&#39;</span><span class="p">)[</span><span class="s1">&#39;Installs&#39;</span><span class="p">]</span>
                <span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
               <span class="p">)</span>
-
+<span class="c1"># add the count of each category to dataframe as a column</span>
+<span class="c1"># calculate the average installs per category</span>
 <span class="n">category_df</span> <span class="o">=</span> <span class="n">category_df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">category_freq_df</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Category&#39;</span><span class="p">),</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Category&#39;</span><span class="p">)</span>
 <span class="n">category_df</span><span class="p">[</span><span class="s1">&#39;average_install&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">category_df</span><span class="p">[</span><span class="s1">&#39;Installs&#39;</span><span class="p">]</span><span class="o">/</span><span class="n">category_df</span><span class="p">[</span><span class="s1">&#39;Counts&#39;</span><span class="p">]</span>  
 
@@ -13777,18 +13784,21 @@ In this section, we will look at how each category is doing by measuring the tot
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[136]:</div>
+<div class="prompt input_prompt">In&nbsp;[158]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot configuration</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;axes.labelsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">70</span>
 <span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">font_scale</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
 
+<span class="c1"># plot of average category installs</span>
 <span class="n">category_chart</span> <span class="o">=</span> <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s2">&quot;Category&quot;</span><span class="p">,</span>
            <span class="n">y</span><span class="o">=</span><span class="s2">&quot;average_install&quot;</span><span class="p">,</span>
            <span class="n">palette</span><span class="o">=</span><span class="s2">&quot;Set3&quot;</span><span class="p">,</span>
            <span class="n">data</span><span class="o">=</span><span class="n">category_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
 
+<span class="c1"># configuration of labels </span>
 <span class="n">category_chart</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s1">&#39;Top 10 Categories by Average Number of Installs&#39;</span><span class="p">,</span>
                          <span class="n">fontsize</span><span class="o">=</span><span class="mi">60</span><span class="p">)</span>
 <span class="n">labels</span> <span class="o">=</span> <span class="n">category_chart</span><span class="o">.</span><span class="n">get_xticklabels</span><span class="p">()</span>
@@ -13834,10 +13844,11 @@ In this section, we will look at how each category is doing by measuring the tot
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[137]:</div>
+<div class="prompt input_prompt">In&nbsp;[161]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">comm_df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMUNICATION&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Installs&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># filter dataframe with only communication apps and view first 10</span>
+<span class="n">comm_df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;COMMUNICATION&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Installs&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">sub_comm</span> <span class="o">=</span> <span class="n">comm_df</span><span class="p">[[</span><span class="s1">&#39;App&#39;</span><span class="p">,</span> <span class="s1">&#39;Installs&#39;</span><span class="p">]]</span>
 <span class="n">sub_comm</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -13852,7 +13863,7 @@ In this section, we will look at how each category is doing by measuring the tot
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[137]:</div>
+    <div class="prompt output_prompt">Out[161]:</div>
 
 
 
@@ -13951,10 +13962,11 @@ In this section, we will look at how each category is doing by measuring the tot
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[138]:</div>
+<div class="prompt input_prompt">In&nbsp;[162]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vp_df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;VIDEO_PLAYERS&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Installs&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># filter dataframe with only video player apps and view first 10</span>
+<span class="n">vp_df</span> <span class="o">=</span> <span class="n">data</span><span class="p">[(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Category&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;VIDEO_PLAYERS&#39;</span><span class="p">)]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;Installs&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 <span class="n">sub_vp</span> <span class="o">=</span> <span class="n">vp_df</span><span class="p">[[</span><span class="s1">&#39;App&#39;</span><span class="p">,</span> <span class="s1">&#39;Installs&#39;</span><span class="p">]]</span>
 <span class="n">sub_vp</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
@@ -13969,7 +13981,7 @@ In this section, we will look at how each category is doing by measuring the tot
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[138]:</div>
+    <div class="prompt output_prompt">Out[162]:</div>
 
 
 
@@ -14077,11 +14089,13 @@ This situation signals two major flags for thinking about launching a new app in
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[141]:</div>
+<div class="prompt input_prompt">In&nbsp;[163]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">cat_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;VIDEO_PLAYERS&#39;</span><span class="p">,</span><span class="s1">&#39;COMMUNICATION&#39;</span><span class="p">,</span> <span class="s1">&#39;SOCIAL&#39;</span><span class="p">,</span><span class="s1">&#39;PHOTOGRAPHY&#39;</span><span class="p">,</span><span class="s1">&#39;PRODUCTIVITY&#39;</span><span class="p">,</span><span class="s1">&#39;TRAVEL_AND_LOCAL&#39;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># list of categories to ignore</span>
+<span class="n">cat_list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;VIDEO_PLAYERS&#39;</span><span class="p">,</span><span class="s1">&#39;COMMUNICATION&#39;</span><span class="p">,</span> <span class="s1">&#39;SOCIAL&#39;</span><span class="p">,</span><span class="s1">&#39;PHOTOGRAPHY&#39;</span><span class="p">,</span><span class="s1">&#39;PRODUCTIVITY&#39;</span><span class="p">,</span><span class="s1">&#39;TRAVEL_AND_LOCAL&#39;</span><span class="p">]</span>
 
+<span class="c1"># create dataframe with boundaries discussed above</span>
 <span class="n">recom</span> <span class="o">=</span> <span class="n">category_df</span><span class="p">[</span><span class="o">~</span><span class="n">category_df</span><span class="o">.</span><span class="n">Category</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">cat_list</span><span class="p">)]</span>
 <span class="n">recom</span> <span class="o">=</span> <span class="n">recom</span><span class="p">[(</span><span class="n">recom</span><span class="p">[</span><span class="s1">&#39;percentage&#39;</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mf">3.03</span><span class="p">)</span> <span class="o">&amp;</span> 
                     <span class="p">(</span><span class="n">recom</span><span class="p">[</span><span class="s1">&#39;average_install&#39;</span><span class="p">]</span><span class="o">&gt;</span> <span class="mf">6726102.56</span><span class="p">)]</span>
@@ -14098,7 +14112,7 @@ This situation signals two major flags for thinking about launching a new app in
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[141]:</div>
+    <div class="prompt output_prompt">Out[163]:</div>
 
 
 
