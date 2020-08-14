@@ -13123,15 +13123,17 @@ We will analyze existing data about the Google Play Store apps to find the best 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For this project, I will make use of an existing dataset of App metadata from the Google Play Store. This dataset is publicly available on <a href="https://www.kaggle.com/lava18/google-play-store-apps">Kaggle</a> with over 10 thousand date entries.
-<br></br><br></br>
-This section will be focused on cleaning the data and looking at the properties of data we will be using.</p>
+<br></br>
+This section will be focused on cleaning the data and looking at the properties of data we will be using.
+<br></br>
+There are 10841 apps recorded in this Google Play Store dataset. From preview of the dataset below, most of the columns seems to be potentially useful for the purpose for this anlaysis except for 'Last Updated' , 'Current Ver' and 'Android Ver'.</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load packages</span>
@@ -13148,7 +13150,7 @@ This section will be focused on cleaning the data and looking at the properties 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in the dataset</span>
@@ -13163,7 +13165,7 @@ This section will be focused on cleaning the data and looking at the properties 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[43]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -13179,7 +13181,7 @@ This section will be focused on cleaning the data and looking at the properties 
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[43]:</div>
 
 
 
@@ -13301,52 +13303,6 @@ This section will be focused on cleaning the data and looking at the properties 
   </tbody>
 </table>
 </div>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>App                object
-Category           object
-Rating            float64
-Reviews            object
-Size               object
-Installs           object
-Type               object
-Price              object
-Content Rating     object
-Genres             object
-Last Updated       object
-Current Ver        object
-Android Ver        object
-dtype: object</pre>
 </div>
 
 </div>
@@ -13772,9 +13728,9 @@ Name: Size, Length: 461, dtype: int64</pre>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Over 35% of the apps are for practical use, such as Tools, Business, Productivity, etc. On the other hand, 29% of the apps are in the Family and Game category.
-<br></br><br></br>
+<br></br>
 Having a closer look at the Family category, we find that it is a collection of games and educational apps designed for children. As we are living in an intense technology world, kids are exposed to electronics at a young age(often by stealing the phones of their parents!). Similarly, in recent years a lot of games companies have started to expand their products onto mobile platforms to attract new players, which resulted in a lot of new games in the apps market.
-<br></br><br></br>
+<br></br>
 About 65% of the market consists of games and productivity apps. But how are the user demands compared to its availability?</p>
 
 </div>
@@ -13791,7 +13747,7 @@ About 65% of the market consists of games and productivity apps. But how are the
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We've seen from above that apps in the genre of games and practical usage dominated the app market. Since there are so many of these apps, are they what the users want? 
-<br></br><br></br>
+<br></br>
 In this section, we will look at how each category is doing by measuring the total installs, along with the average number of installs per category.</p>
 
 </div>
@@ -14104,9 +14060,9 @@ In this section, we will look at how each category is doing by measuring the tot
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Similarly, platforms like YouTube, Google Play Movies &amp; TV, etc.  have dominated the Video Player category with a large number of downloads. 
-<br></br><br></br>
+<br></br>
 The trend continues in other categories with a high average download such as social(Facebook, Google+, Instagram), Photography(Google Photos), Productivity(Google Drive, Cloud Print), and so on. 
-<br></br><br></br>
+<br></br>
 This situation signals two major flags for thinking about launching a new app in these categories.</p>
 <ol>
 <li>The majority of installs come from a few apps, the category itself may not be as popular to the consumers</li>
