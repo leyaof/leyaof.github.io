@@ -13084,9 +13084,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>In this notebook, the goal is to find the best features to attract mobile application users. If we were to develop an app to publish on Google Play Store, what kind of app would be the most successful?
+<p>In this notebook, the goal is to find the best features to attract mobile application users. If we were to develop an app to publish on Google Play Store, what kind of app would be the most successful? For this purpose, we would like to find out some key things that make up a popular app such as its category, price, size, etc. 
 <br></br>
-We will analyze existing data about the Google Play Store apps to find the best area to publish a new app. With a focus to maximize user install potential, we'll explore the following:</p>
+We will analyze existing data about the Google Play Store apps to find the best area to publish a new app. We will use the number of installs as an indicator of success and attempt to find relationships between the number of installs and different properties of an app. With a focus to maximize user install potential, we'll explore the following:</p>
 <ul>
 <li>What kind of apps are available in the market?</li>
 <li>What do users tend to download?</li>
@@ -13625,7 +13625,7 @@ Name: Size, Length: 461, dtype: int64</pre>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>There are over a thousand undetermined values for the size of apps. Since we will use this column as part of the analysis, these missing values will be filled instead of removed. As the distribution of the App size is not normally distributed, I will fill the empty values with the median of the column values.</p>
+<p>There are different units in the size column, and I will convert all the values of KB to MB. Furthermore, there are over a thousand undetermined values for the size of apps. Since we will use this column as part of the analysis, these missing values will be filled instead of removed. As the distribution of the App size is not normally distributed, I will fill the empty values with the median of the column values.</p>
 
 </div>
 </div>
@@ -14384,39 +14384,6 @@ We observe that apps with installs between 1000 to 500000 have a portion of its 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Price</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[22]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>1.097230562169997</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
 <div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
@@ -14521,9 +14488,7 @@ We observe that apps with installs between 1000 to 500000 have a portion of its 
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Not surprisingly, most people prefer downloading free apps. Everyone(or most people) likes free stuff. If apps are offering what I need for free, why should I consider ones that I need to pay? Some developers publish multiple versions of the same app. There may be a listing for a free or lite version for people to try out the app, and if they want to upgrade(usually offering more advanced features) they often provide a 'pro' or 'premium' version for the cost of some money. Some people might convert to the paid version if they enjoyed the free version. Or if they're already satisfied with the free version, then they will keep using the free version, and this could be a reason why most downloads come from free apps since developers often offer a free version of an app with all essential features.
 <br></br>
-Most people who are willing to install paid apps have a budget of \$5 or less, a small group of people is willing to buy apps that cost more than \\$20.
-<br></br>
-There are a few apps with a listed price of over $300. Upon examining what those apps are, it appears that there is a list of apps with a common title of 'I am rich'. The descriptions for these titles are more or less conveying the message that buying these apps makes the buyer look wealthy because the price is so ridiculously high. These are considered an outlier in this case, and thus I've removed them from the graph above.</p>
+On average, people are willing to buy an app for \$1 or less; a small group of people is willing to buy apps that cost more than \\$20. There are a few apps with a listed price of over \$300. Upon examining what those apps are, it appears that there is a list of apps with a common title of 'I am rich'. The descriptions for these titles are more or less conveying the message that buying these apps makes the buyer look wealthy because the price is so ridiculously high. These are considered an outlier in this case, and thus I've removed them from the graph above.</p>
 
 </div>
 </div>
@@ -14547,83 +14512,6 @@ There are a few apps with a listed price of over $300. Upon examining what those
 
 </div>
 </div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Size&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[25]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>12.000    1408
-11.000     182
-13.000     177
-14.000     177
-15.000     164
-          ... 
-0.411        1
-0.232        1
-0.081        1
-0.658        1
-0.526        1
-Name: Size, Length: 459, dtype: int64</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">Size</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>19.33116052386375</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -14785,18 +14673,28 @@ Name: Size, Length: 459, dtype: int64</pre>
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span> 
-</pre></div>
-
-    </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Conclusion">Conclusion<a class="anchor-link" href="#Conclusion">&#182;</a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this notebook, we analyzed mobile app data from the Google Play Store to find the criteria in making a successful app. We first explored what is available in the market and what people tend to install. From this, we find that it is best to avoid the Communication and Game category because these fields are highly saturated. On the other hand, the Books and Reference category could be an excellent place to launch a new app due to high demands and low market supply.
+<br></br>
+Next, we looked at the performance of apps of different categories through the app's rating and how it can affect the downloads. One thing that caught our attention was that Dating apps have a distinct lower rating compared to others. Furthermore, app rating has a positive relationship with the number of installs. These two information signals that there is potentially a market for Dating apps if it can outshine the current apps in the category.
+<br></br>
+In terms of the price, it is best to keep the app free or under \$1. Unless we are publishing an app required for professional or medical fields, in that case, the pricing may vary depending on the content.
+<br></br>
+As for the size of the app, it would be safe to keep the size under 20MB. However, if the app is heavily dependent on the graphic to enhance the user experience, such as a game, then it is okay to have the app slightly on the bulky side.
+<br></br>
+To conclude, a successful app would be one that is in demand in the market, possibly free or low price and typically lightweight.</p>
 
+</div>
+</div>
 </div>
     </div>
   </div>
