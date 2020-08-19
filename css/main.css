@@ -168,7 +168,6 @@ body {
 
 .project-content {
 	width: 450px;
-	transition: .5s ease;
     opacity: 0;
     position: absolute;
     top: 50%;
@@ -179,7 +178,7 @@ body {
 }
 
 .project-title {
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: bold;
 	width: 500px;
 	margin-bottom: 0px;
@@ -191,20 +190,30 @@ body {
 	color: #b3b3b3;
 }
 
+.project-title {
+	color: #ffffff;
+}
+
 .project-desc {
 	margin-top: 50px;
 	color: #ffffff;
 }
 
-.project:hover {
+.project {
 	background-color: #14141f;
 }
 
-.project:hover img {
-	opacity:0.2;
+.project img {
+	opacity:0.29;
 }
 
-.project:hover .project-content {
+.project:hover img {
+	transition: 0.5s ease;
+	min-width: 110%;
+	min-height: 110%;
+}
+
+.project .project-content {
 	opacity: 1;
 }
 
