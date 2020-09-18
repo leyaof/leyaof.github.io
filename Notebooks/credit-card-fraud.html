@@ -13088,9 +13088,9 @@ div#notebook {
 This project will focus on data cleaning and model building. To approach the missing data, we will observe the percentage of missing data of each feature and choose different methods and handling such data based on the volume that is missing. We will also compare various binary classification models, mainly using the F1 score as a metric to filter out the best model to use for this problem. We will compare the following models:</p>
 <ul>
 <li>K-Nearest Neighbors</li>
-<li>Support Vector Machine</li>
-<li>Logistic Regression</li>
 <li>Decision Tree</li>
+<li>Random Forest</li>
+<li>Logistic Regression</li>
 </ul>
 <p>SMOTE and Random Undersampling techniques are used to account for the unbalanced dataset to allow for better quality training data and to ensure the results produced by the models are accurate. Furthermore, we will use an encoder to process non-numeric data so that the models can read and process the information.</p>
 
@@ -14166,6 +14166,21 @@ After transformation by applying SMOTE the minority class and undersampling the 
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Model-Selection">Model Selection<a class="anchor-link" href="#Model-Selection">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this section we will fit the transformed training data with the following models:</p>
+<ul>
+<li>K-Nearest Neighbors</li>
+<li>Decision Tree</li>
+<li>Random Forest</li>
+<li>Logistic Regression</li>
+</ul>
+<p>We will compute each model's precision, recall, and F1 score and organize them in a table. One of these models will be chosen as the best model for our problem. The decision will be made based on the precision, recall and F1 score of the model, emphasizing the f1 score.</p>
+
 </div>
 </div>
 </div>
