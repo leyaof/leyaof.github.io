@@ -13134,7 +13134,7 @@ In this project, we will use two datasets, the application data and the previous
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Load packages</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load packages</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
@@ -13151,7 +13151,7 @@ In this project, we will use two datasets, the application data and the previous
 <div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in application dataset</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in application dataset</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;application_data.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -13165,7 +13165,7 @@ In this project, we will use two datasets, the application data and the previous
 <div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Read in previous application dataset</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># read in previous application dataset</span>
 <span class="n">data2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;previous_application.csv&quot;</span><span class="p">)</span>
 </pre></div>
 
@@ -13183,7 +13183,7 @@ In this project, we will use two datasets, the application data and the previous
 <span class="n">to_drop</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;NAME_CONTRACT_TYPE&#39;</span><span class="p">,</span> <span class="s1">&#39;NAME_TYPE_SUITE&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_GOODS_PRICE&#39;</span><span class="p">,</span> <span class="s1">&#39;AMT_ANNUITY&#39;</span><span class="p">,</span>
            <span class="s1">&#39;AMT_CREDIT&#39;</span><span class="p">,</span> <span class="s1">&#39;WEEKDAY_APPR_PROCESS_START&#39;</span><span class="p">,</span> <span class="s1">&#39;HOUR_APPR_PROCESS_START&#39;</span><span class="p">]</span>
 <span class="n">data2</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">to_drop</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="c1"># Join movie and credits dataset</span>
+<span class="c1"># join application and previous application dataset</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">data2</span><span class="p">,</span> <span class="n">left_on</span><span class="o">=</span><span class="s1">&#39;SK_ID_CURR&#39;</span><span class="p">,</span> <span class="n">right_on</span><span class="o">=</span><span class="s1">&#39;SK_ID_CURR&#39;</span><span class="p">)</span>
 </pre></div>
 
@@ -13650,7 +13650,7 @@ In this project, we will use two datasets, the application data and the previous
 <div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Show columns with less than 1% missing data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># show columns with less than 1% missing data</span>
 <span class="n">na1_tab</span> <span class="o">=</span> <span class="n">missing_data</span><span class="p">[</span><span class="n">missing_data</span><span class="o">&lt;</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">na1_tab</span>
 </pre></div>
@@ -14087,7 +14087,7 @@ SMOTE and random under-sampling will be applied to the minority and majority cla
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># split dataset into train and test set,</span>
-<span class="c1">#using the target column as our target and the rest of the columns for predicting</span>
+<span class="c1"># using the target column as our target and the rest of the columns for predicting</span>
 <span class="n">X</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;TARGET&#39;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">target</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;TARGET&#39;</span><span class="p">]</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
@@ -14104,7 +14104,7 @@ SMOTE and random under-sampling will be applied to the minority and majority cla
 <div class="prompt input_prompt">In&nbsp;[94]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Apply oversampling to the miniority class and undersampling to the magority class</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># apply oversampling to the miniority class and undersampling to the magority class</span>
 <span class="n">over_sample</span> <span class="o">=</span> <span class="n">SMOTE</span><span class="p">(</span><span class="n">sampling_strategy</span><span class="o">=</span> <span class="s1">&#39;minority&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
 <span class="n">under_sample</span> <span class="o">=</span> <span class="n">RandomUnderSampler</span><span class="p">(</span><span class="n">sampling_strategy</span><span class="o">=</span> <span class="s1">&#39;majority&#39;</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">21</span><span class="p">)</span>
 <span class="n">steps</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;over&#39;</span><span class="p">,</span> <span class="n">over_sample</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;under&#39;</span><span class="p">,</span> <span class="n">under_sample</span><span class="p">)]</span>
@@ -14191,7 +14191,7 @@ After transformation by applying SMOTE the minority class and undersampling the 
     <span class="n">precision</span> <span class="o">=</span> <span class="n">precision_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">model_predict</span><span class="p">)</span>
     <span class="n">recall</span> <span class="o">=</span> <span class="n">recall_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">model_predict</span><span class="p">)</span>
     <span class="n">f1</span> <span class="o">=</span> <span class="n">f1_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">model_predict</span><span class="p">)</span>   
-    <span class="c1"># update higest f1 score and model features</span>
+    <span class="c1"># update highest f1 score and model features</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">f1</span> <span class="o">&gt;</span> <span class="n">cur_score</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">model_name</span><span class="o">!=</span><span class="s1">&#39;KNeighborsClassifier&#39;</span><span class="p">):</span>
         <span class="n">cur_score</span> <span class="o">=</span> <span class="n">f1</span>
         <span class="n">best_feature</span> <span class="o">=</span> <span class="n">cur_model</span><span class="o">.</span><span class="n">feature_importances_</span>
